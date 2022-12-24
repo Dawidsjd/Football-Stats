@@ -10,7 +10,8 @@ function App() {
 
   const SettsDate = () => {
     const d = new Date();
-    setData(d.getFullYear().toString() + "-" + d.getMonth().toString() + "-" + d.getDate().toString());
+    let month = d.getMonth()+1;
+    setData(d.getFullYear().toString() + "-" + month.toString() + "-" + d.getDate().toString());
   }
 
 useEffect(() => {
