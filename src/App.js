@@ -11,7 +11,21 @@ function App() {
   const SettsDate = () => {
     const d = new Date();
     let month = d.getMonth()+1;
-    setData(d.getFullYear().toString() + "-" + month.toString() + "-" + d.getDate().toString());
+    let day = d.getDate();
+    
+    for(let i = 0; i < 10;i++){
+      if(month == i){
+        month = "0" + month;
+      }
+    }
+    for(let i = 0; i < 10;i++){
+      if(day == i){
+        day = "0" + day;
+      }
+    }
+
+    setData(d.getFullYear().toString() + "-" + month.toString() + "-" + day.toString());
+
   }
 
 useEffect(() => {
